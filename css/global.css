@@ -1,0 +1,66 @@
+/* Desktop */
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+            " nav nav nav nav"
+            " heroBanner heroBanner heroBanner heroBanner "
+            " blogPost blogPost blogPost blogPost "
+            " twitter twitter twitter twitter "
+            " footer footer footer footer ";
+}
+nav{
+    grid-area: nav;
+    min-height: 80px;
+    width: 100%;
+    background-color: pink;
+}
+.heroBanner{
+    grid-area: heroBanner;
+    min-height: 200px;
+    width: 100%;
+    background-color: gray;
+}
+.blogPost{
+    grid-area: blogPost;
+    min-height: 500px;
+    width: 100%;
+    background-color: red;
+}
+.twitter{
+    grid-area: twitter;
+    min-height: 200px;
+    width: 100%;
+    background-color: blue;
+}
+footer{
+    grid-area: footer;
+    min-height: 100px;
+    width: 100%;
+    background-color: black;
+}
+
+/* Tablet */
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+                " heroBanner heroBanner"
+                " nav nav"
+                " blogPost twitter"
+                " footer footer";
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) and (min-width: 0px) {
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+                " footer"        
+                " twitter"
+                " blogPost "
+                " heroBanner "
+                " nav";
+    }
+}
