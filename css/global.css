@@ -1,4 +1,9 @@
 /* Desktop */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
